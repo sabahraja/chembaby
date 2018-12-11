@@ -1,0 +1,16 @@
+Package: chembaby
+Title: Fundamentals of Chemistry (one line, title case)
+Version: 0.0.0.9000
+Authors@R:c(person("Raja","Sabah",role=c("aut","cre"),email="sabahraja@gmail.com"),
+          person("Kerley","Megan",role="aut"))
+Maintainer: Sabah Raja <sabahraja@gmail.com>
+Description: This package deals with the fundamentals of chemistry. This package is capable of generating lewis dot structures, bohr models, long form electron configurations, and abbreviated electron configurations.The package also contains data file with vast amount of data on majority of the elements of the periodic table. This data file was a combination of information obtained from: https://www.ptable.com/ and https://www.csun.edu/science/ref/spreadsheets/index.html. 
+Depends: R (>= 3.5.0)
+License: MIT + file LICENCE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+  readxl,
+  plotrix,
+  shape
+RoxygenNote: 6.1.0

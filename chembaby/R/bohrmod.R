@@ -1,0 +1,7543 @@
+#'bohrmod
+#'
+#'This function allows you to generate bohr models for any element of the periodic table
+#'@param ElementSymbol Element Symbol must be provided in order for the function to work. Reference: https://www.ptable.com/
+#'@keywords bohr periodic
+#'@export
+#'@examples
+#'bohrmod(ElementSymbol='H')
+#'bohrmod(ElementSymbol='Fe')
+#'bohrmod(ElementSymbol='LR') Does not generate a bohr model for a wrong element symbol (case sensitive)
+require(shape)
+require(plotrix)
+ElementSymbol<-character()
+bohrmod<-function(ElementSymbol){
+  asp=1
+#H
+if (ElementSymbol==('H')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,.5,nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+}
+#He
+if (ElementSymbol==('He')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,.5,nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+
+}
+#Period 2
+#Li
+if (ElementSymbol==('Li')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  }
+#Be
+if (ElementSymbol==('Be')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+}
+#B
+if (ElementSymbol==('B')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.3
+}
+#C
+if (ElementSymbol==('C')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.4
+}
+#N
+if (ElementSymbol==('N')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+}
+#O
+if (ElementSymbol==('O')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+}
+#F
+if (ElementSymbol==('F')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+
+}
+#Ne
+if (ElementSymbol==('Ne')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+}
+
+#Period 3
+#Na
+if (ElementSymbol==('Na')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+}
+#Mg
+if (ElementSymbol==('Mg')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+}
+#Al
+if (ElementSymbol==('Al')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+}
+#Si
+if (ElementSymbol==('Si')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+}
+#P
+if (ElementSymbol==('P')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+  points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+}
+#S
+if (ElementSymbol==('S')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+  points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+  points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+}
+#Cl
+if (ElementSymbol==('Cl')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+  points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+  points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+  points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+}
+#Ar
+if (ElementSymbol==('Ar')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+  points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+  points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+  points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+  points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+}
+#Period 4
+#K
+if (ElementSymbol==('K')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+      draw.circle(0,0,.2,nv=100,border='green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+      draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+      points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+      points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+      points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+      points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+      points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+      points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+      points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+      points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+      points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+      points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+      points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+      points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+      points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+      points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+      points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+      points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+      points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+      points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+      points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+}
+#Ca
+if (ElementSymbol==('Ca')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+      draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+      draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+      points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+      points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+      points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+      points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+      points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+      points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+      points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+      points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+      points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+      points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+      points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+      points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+      points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+      points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+      points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+      points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+      points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+      points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+      points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+      points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+}
+#Sc
+  if (ElementSymbol==('Sc')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+  }
+#Ti
+  if (ElementSymbol==('Ti')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+  }
+#V
+  if (ElementSymbol==('V')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+  }
+#Cr
+  if (ElementSymbol==('Cr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+  }
+#Mn
+  if (ElementSymbol==('Mn')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+  }
+#Fe
+  if (ElementSymbol==('Fe')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+  }
+#Co
+  if (ElementSymbol==('Co')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+  }
+#Ni
+  if (ElementSymbol==('Ni')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+  }
+#Cu
+  if (ElementSymbol==('Cu')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+  }
+#Zn
+  if (ElementSymbol==('Zn')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+  }
+#Ga
+  if (ElementSymbol==('Ga')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+  }
+#Ge
+  if (ElementSymbol==('Ge')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+  }
+#As
+  if (ElementSymbol==('As')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+  }
+#Se
+  if (ElementSymbol==('Se')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+  }
+#Br
+  if (ElementSymbol==('Br')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+  }
+#Kr
+  if (ElementSymbol==('Kr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+  }
+#Period 5
+#Rb
+  if (ElementSymbol==('Rb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  }
+#Sr
+  if (ElementSymbol==('Sr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+  }
+#Y
+  if (ElementSymbol==('Y')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+  }
+#Zr
+  if (ElementSymbol==('Zr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+  }
+#Nb
+  if (ElementSymbol==('Nb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+
+  }
+#Mo
+  if (ElementSymbol==('Mo')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  }
+#Tc
+  if (ElementSymbol==('Tc')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+
+  }
+#Ru
+  if (ElementSymbol==('Ru')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  }
+#Rh
+  if (ElementSymbol==('Rh')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  }
+#Pd
+  if (ElementSymbol==('Pd')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+  }
+#Ag
+  if (ElementSymbol==('Ag')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  }
+#Cd
+  if (ElementSymbol==('Cd')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+  }
+#In
+  if (ElementSymbol==('In')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+  }
+#Sn
+  if (ElementSymbol==('Sn')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+  }
+#Sb
+  if (ElementSymbol==('Sb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+  }
+#Te
+  if (ElementSymbol==('Te')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+  }
+#I
+  if (ElementSymbol==('I')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+  }
+#Xe
+  if (ElementSymbol==('Xe')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+  }
+  if (ElementSymbol==('Cs')){
+  plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+  draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+  draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+  points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+  points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+  points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+  points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+  points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+  points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+  points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+  points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+  points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+  points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+  points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+  points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+  points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+  points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+  points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+  points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+  points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+  points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+  points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+  points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+  points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+  points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+  points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+  points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+  points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+  points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+  points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+  points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+  points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+  points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+  points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+  points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+  points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+  points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+  points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+  points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+  points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+  points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+  points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+  points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+  points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+  points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+  points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+  points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+  points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+  points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+  points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+  points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+  points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+  points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+  points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+  points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+  points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+  points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+  points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+  }
+  if (ElementSymbol==('Ba')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('La')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Ce')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Pr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Nd')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Pm')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Sm')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Eu')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Gd')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Tb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Dy')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Ho')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Er')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Tm')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Yb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Lu')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Hf')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Ta')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('W')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Re')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Os')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Ir')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Pt')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+  }
+  if (ElementSymbol==('Au')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+  }
+  if (ElementSymbol==('Hg')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+  }
+  if (ElementSymbol==('Tl')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+  }
+  if (ElementSymbol==('Pb')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+  }
+  if (ElementSymbol==('Bi')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+  }
+  if (ElementSymbol==('Po')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+  }
+  if (ElementSymbol==('At')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+  }
+  if (ElementSymbol==('Rn')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+  }
+  if (ElementSymbol==('Fr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+  }
+  if (ElementSymbol==('Ra')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Th')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Pa')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('U')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Np')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Pu')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Am')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Cm')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Bk')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Cf')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Es')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Fm')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Md')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('No')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Lr')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Rf')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Db')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Sg')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Bh')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Hs')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Mt')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Ds')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+  }
+  if (ElementSymbol==('Rg')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+  }
+  if (ElementSymbol==('Cn')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+  }
+  if (ElementSymbol==('Nh')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+}
+  if (ElementSymbol==('Fl')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+    points(-3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.4
+  }
+  if (ElementSymbol==('Mc')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+    points(-3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.4
+    points(2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.5
+  }
+  if (ElementSymbol==('Lv')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+    points(-3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.4
+    points(2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.5
+    points(-2.65,-2.3,pch=1,col='red',lwd=7,cex=.50)#7.6
+  }
+  if (ElementSymbol==('Ts')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+    points(-3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.4
+    points(2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.5
+    points(-2.65,-2.3,pch=1,col='red',lwd=7,cex=.50)#7.6
+    points(-2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.7
+  }
+  if (ElementSymbol==('Og')){
+    plot.new(); plot.window(xlim=c(-5,5),ylim=c(-5,5),asp = 1)
+    draw.circle(0,0,.2,nv=100,border = 'green',col = 'purple',lty=1,density = NULL, lwd=1,asp)
+    draw.circle(0,0,c(.5,1,1.5,2,2.5,3,3.5),nv=100,border=NULL,col=NA,lty=1,density=NULL,lwd = 3,asp)
+    points(0,.5,pch=1,col='red',lwd=7,cex=.50)#point 1.1
+    points(0,-.5,pch=1,col='red',lwd=7,cex=.50)#point 1.2
+    points(0,1,pch=1,col='red',lwd=7,cex=.50)#2.1
+    points(0,-1,pch=1,col='red',lwd=7,cex=.50)#2.2
+    points(.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.3
+    points(-.7,.75,pch=1,col='red',lwd=7,cex=.50)#2.4
+    points(1,0,pch=1,col='red',lwd=7,cex=.50)#2.5
+    points(-1,0,pch=1,col='red',lwd=7,cex=.50)#2.6
+    points(.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.7
+    points(-.7,-.75,pch=1,col='red',lwd=7,cex=.50)#2.8
+    points(0,1.5,pch=1,col='red',lwd=7,cex=.50)#3.1
+    points(0,-1.5,pch=1,col='red',lwd=7,cex=.50)#3.2
+    points(1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.3
+    points(-1.5,0,pch=1,col='red',lwd=7,cex=.50)#3.4
+    points(0.5,1.4,pch=1,col='red',lwd=7,cex=.50)#3.5
+    points(-.5,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.6
+    points(.9,1.2,pch=1,col='red',lwd=7,cex=.50)#3.7
+    points(-.9,-1.2,pch=1,col='red',lwd=7,cex=.50)#3.8
+    points(1.2,.9,pch=1,col='red',lwd=7,cex=.50)#3.9
+    points(-1.2,-.9,pch=1,col='red',lwd=7,cex=.50)#3.10
+    points(1.4,.5,pch=1,col='red',lwd=7,cex=.50)#3.11
+    points(-1.4,-.5,pch=1,col='red',lwd=7,cex=.50)#3.12
+    points(-1.4,.6,pch=1,col='red',lwd=7,cex=.50)#3.13
+    points(1.4,-.6,pch=1,col='red',lwd=7,cex=.50)#3.14
+    points(0.6,-1.4,pch=1,col='red',lwd=7,cex=.50)#3.15
+    points(-0.6,1.4,pch=1,col='red',lwd=7,cex=.50)#3.16
+    points(-1.05,1.1,pch=1,col='red',lwd=7,cex=.50)#3.17
+    points(1.05,-1.1,pch=1,col='red',lwd=7,cex=.50)#3.18
+    points(0,2,pch=1,col='red',lwd=7,cex=.50)#4.1
+    points(0,-2,pch=1,col='red',lwd=7,cex=.50)#4.2
+    points(2,0,pch=1,col='red',lwd=7,cex=.50)#4.3
+    points(-2,0,pch=1,col='red',lwd=7,cex=.50)#4.4
+    points(0.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.5
+    points(0.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.6
+    points(-.5,1.95,pch=1,col='red',lwd=7,cex=.50)#4.7
+    points(-.5,-1.95,pch=1,col='red',lwd=7,cex=.50)#4.8
+    points(.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.9
+    points(.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.10
+    points(-.8,-1.85,pch=1,col='red',lwd=7,cex=.50)#4.11
+    points(-.8,1.85,pch=1,col='red',lwd=7,cex=.50)#4.12
+    points(1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.13
+    points(1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.14
+    points(-1.2,1.63,pch=1,col='red',lwd=7,cex=.50)#4.15
+    points(-1.2,-1.63,pch=1,col='red',lwd=7,cex=.50)#4.16
+    points(1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.17
+    points(1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.18
+    points(-1.5,1.35,pch=1,col='red',lwd=7,cex=.50)#4.19
+    points(-1.5,-1.35,pch=1,col='red',lwd=7,cex=.50)#4.20
+    points(1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.21
+    points(1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.22
+    points(-1.75,.95,pch=1,col='red',lwd=7,cex=.50)#4.23
+    points(-1.75,-.95,pch=1,col='red',lwd=7,cex=.50)#4.24
+    points(2,.3,pch=1,col='red',lwd=7,cex=.50)#4.25
+    points(2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.26
+    points(-2,.3,pch=1,col='red',lwd=7,cex=.50)#4.27
+    points(-2,-.3,pch=1,col='red',lwd=7,cex=.50)#4.28
+    points(1.9,.7,pch=1,col='red',lwd=7,cex=.50)#4.29
+    points(1.9,-.7,pch=1,col='red',lwd=7,cex=.50)#4.30
+    points(-1.9,.75,pch=1,col='red',lwd=7,cex=.50)#4.31
+    points(-1.9,-.75,pch=1,col='red',lwd=7,cex=.50)#4.32
+    points(0,2.5,pch=1,col='red',lwd=7,cex=.50)#5.1
+    points(0,-2.5,pch=1,col='red',lwd=7,cex=.50)#5.2
+    points(2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.3
+    points(-2.5,0,pch=1,col='red',lwd=7,cex=.50)#5.4
+    points(.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.5
+    points(-.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.6
+    points(-.6,2.4,pch=1,col='red',lwd=7,cex=.50)#5.7
+    points(.6,-2.4,pch=1,col='red',lwd=7,cex=.50)#5.8
+    points(1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.9
+    points(-1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.10
+    points(-1.2,2.2,pch=1,col='red',lwd=7,cex=.50)#5.11
+    points(1.2,-2.2,pch=1,col='red',lwd=7,cex=.50)#5.12
+    points(1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.13
+    points(-1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.14
+    points(-1.55,1.95,pch=1,col='red',lwd=7,cex=.50)#5.15
+    points(1.55,-1.95,pch=1,col='red',lwd=7,cex=.50)#5.16
+    points(1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.17
+    points(-1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.18
+    points(-1.9,1.63,pch=1,col='red',lwd=7,cex=.50)#5.19
+    points(1.9,-1.63,pch=1,col='red',lwd=7,cex=.50)#5.20
+    points(2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.21
+    points(-2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.22
+    points(-2.15,1.3,pch=1,col='red',lwd=7,cex=.50)#5.23
+    points(2.15,-1.3,pch=1,col='red',lwd=7,cex=.50)#5.24
+    points(2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.25
+    points(-2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.26
+    points(-2.3,1,pch=1,col='red',lwd=7,cex=.50)#5.27
+    points(2.3,-1,pch=1,col='red',lwd=7,cex=.50)#5.28
+    points(2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.29
+    points(-2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.30
+    points(-2.45,.5,pch=1,col='red',lwd=7,cex=.50)#5.31
+    points(2.45,-.5,pch=1,col='red',lwd=7,cex=.50)#5.32
+    points(0,3,pch=1,col='red',lwd=7,cex=.50)#6.1
+    points(0,-3,pch=1,col='red',lwd=7,cex=.50)#6.2
+    points(-3,0,pch=1,col='red',lwd=7,cex=.50)#6.3
+    points(3,0,pch=1,col='red',lwd=7,cex=.50)#6.4
+    points(1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.5
+    points(-1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.6
+    points(-1,2.8,pch=1,col='red',lwd=7,cex=.50)#6.7
+    points(1,-2.8,pch=1,col='red',lwd=7,cex=.50)#6.8
+    points(2.25,2,pch=1,col='red',lwd=7,cex=.50)#6.9
+    points(-2,2.25,pch=1,col='red',lwd=7,cex=.50)#6.10
+    points(1.9,-2.3,pch=1,col='red',lwd=7,cex=.50)#6.11
+    points(-2.25,-2,pch=1,col='red',lwd=7,cex=.50)#6.12
+    points(2.8,1,pch=1,col='red',lwd=7,cex=.50)#6.13
+    points(-2.8,-1,pch=1,col='red',lwd=7,cex=.50)#6.14
+    points(-2.9,.75,pch=1,col='red',lwd=7,cex=.50)#6.15
+    points(2.9,-.75,pch=1,col='red',lwd=7,cex=.50)#6.16
+    points(-2.6,1.5,pch=1,col='red',lwd=7,cex=.50)#6.17
+    points(2.6,-1.5,pch=1,col='red',lwd=7,cex=.50)#6.18
+    points(0,3.5,pch=1,col='red',lwd=7,cex=.50)#7.1
+    points(0,-3.5,pch=1,col='red',lwd=7,cex=.50)#7.2
+    points(3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.3
+    points(-3.5,0,pch=1,col='red',lwd=7,cex=.50)#7.4
+    points(2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.5
+    points(-2.65,-2.3,pch=1,col='red',lwd=7,cex=.50)#7.6
+    points(-2.65,2.3,pch=1,col='red',lwd=7,cex=.50)#7.7
+    points(2.65,-2.3,pch=1,col='red',lwd=7,cex=.50)#7.8
+  }
+  if (ElementSymbol==('')){
+    warning('Missing Element Symbol')
+  }
+}
+
+
+
